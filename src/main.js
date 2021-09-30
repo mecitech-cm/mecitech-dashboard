@@ -6,10 +6,8 @@ import Dashboard from '@/components/Dashboard'
 import DashboardHome from '@/pages/Home'
 
 import store from './store'
-// require styles
-import '@/assets/css/tailwind.css'
 
-
+import "@/assets/styles/main.css";
 Vue.config.productionTip = false
 
 Vue.use(Router)
@@ -34,3 +32,5 @@ new Vue({
   store
 }).$mount('#app')
 
+
+//import "@/assets/styles/main.css";
