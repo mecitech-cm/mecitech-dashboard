@@ -1,6 +1,6 @@
 <template>
     <div class="sticky top-0 z-40">
-            <div class="navbar  h-20 px-6 bg-gray-100 border-b flex items-center justify-between ml-3 mt-3 rounded-lg ml-4">
+            <div class="navbar shadow h-20 px-6 bg-gray-100 border-b flex items-center justify-between ml-3 mt-3 rounded-lg ml-4">
 
               <!-- left navbar -->
               <div class="flex">
@@ -31,36 +31,80 @@
                 <path 
                 d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
                 </svg>
-                <div class="inline-block relative w-30 bg-gray-100 mr-3">
-                <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                      <option>Option 2</option>
-                      <option>Option 3</option>
-                      </select>
+                <div class="inline-block relative w-15 mr-3">
+                <select class="block appearance-none w-full bg-gray-100  
+                hover:border-gray-500 px-4 py-2 pr-8 rounded 
+                leading-tight focus:outline-none  ">
+                  <option>🇬🇧 EN</option>
+                  <option>🇫🇷 FR</option>
+                </select>
                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
               </div>
                </div>
                    <img
-                src="src/assets/images/me.JPG"
+                src="https://pbs.twimg.com/profile_images/378800000298815220/b567757616f720812125bfbac395ff54_normal.png"
                 alt
-                class="h-10 w-10 bg-gray-200 border rounded-full  rounded-t-xl"
+                class="h-10 w-10 bg-gray-200 border rounded-full"
+               
                 @click="dropDownOpen = !dropDownOpen">
-               <strong class="mr">Joe Emako</strong> 
+               <strong class="ml-3">Joe Emako</strong> 
               </div>
 
             </div>
 
             <!-- dropdown menu -->
-            <div class="absolute items-center  bg-gray-100 border border-t-0 shadow-xl text-gray-700 rounded-b-lg w-48 bottom-10 right-0 mr-6 mt-4 transition duration-300 ease-in-out" :class="dropDownOpen ? '' : 'hidden' ">
-                <a href="#" class="  px-8 py-4   hover:bg-gray-200  flex " >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                 </svg>
+            <div class="absolute items-center content
+             bg-gray-100 border border-t-0 shadow text-gray-700 rounded-b-lg
+             w-auto bottom-10 right-0 mr-6 mt-4 "
+              :class="dropDownOpen ? '' : 'hidden' ">
+              <div class="card text-center h-32 ">
+               <div class="w-full px-4 flex justify-center">
+               <div class="relative">
+              <img
+                src="https://pbs.twimg.com/profile_images/378800000298815220/b567757616f720812125bfbac395ff54_normal.png"
+                alt
+                class="h-10 w-10 bg-gray-200 border rounded-full mt-4">
+                 </div>
+                 </div>
+              <div class=" px-8 font-black">joe emako</div>
+              <div class=" px-8 py-2 font-thin">joeemako3@gamil.com</div>
+              </div>
+            <hr>
+                <a href="#" class="w-full flex items-center   h-10 pl-4 hover:bg-gray-400 rounded-lg cursor-pointer">
+                <svg class="h-8 w-8 text-blue-500 ml-3"  fill="none" viewBox="0 0 15 " stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+               </svg>
                      My profile 
                 </a>
-                <a href="#" class="  px-8 py-4 hover:bg-gray-200  flex">Settings</a>
-                <a href="#" class="  px-8 py-4 hover:bg-gray-200  flex">Logout</a>
+                 <a href="#" class="w-full flex items-center   h-10 pl-4 hover:bg-gray-400 rounded-lg cursor-pointer">
+                    <svg class="h-8 w-8 text-blue-500 ml-3"  fill="none" viewBox="0 0 15" stroke="currentColor">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/>
+                      </svg>
+
+                     Messsages 
+                </a>
+                <a href="#" class="w-full flex items-center   h-10 pl-4 hover:bg-gray-400 rounded-lg cursor-pointer">
+               <svg class="h-8 w-8 text-blue-500 ml-3"  fill="none" viewBox="0 0 15" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+               </svg>
+
+                     Activity 
+                </a>
+                  <a href="#" class="w-full flex items-center  h-10 pl-4 hover:bg-gray-400 rounded-lg cursor-pointer">
+                <svg class="h-8 w-8 text-blue-500 ml-3"  fill="none" viewBox="0 0 15" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+               </svg>
+                     FQR
+                </a>
+                <a href="#" class=" w-full flex items-center  h-10 pl-4 hover:bg-gray-400 rounded-lg cursor-pointer">
+                  <svg class="h-8 w-8 text-blue-500 ml-3 "  fill="none" viewBox="0 0 15" stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+
+                     Sign Out
+                </a>
+               
                 
             </div>
             <!-- dropdown menu end -->
@@ -89,7 +133,5 @@ export default {
 }
 </script>
 <style>
-.navbar{
-box-shadow: 5px 5px 10px;
-}
+
 </style>
