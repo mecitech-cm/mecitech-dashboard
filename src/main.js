@@ -1,10 +1,19 @@
-import * as Vue from 'vue';
+import Vue from 'vue'
 import App from './App.vue'
-import * as VueRouter from 'vue-router';
+import Router from 'vue-router'
+
 import Dashboard from '@/components/Dashboard'
 import DashboardHome from '@/pages/Home'
 
-import "@/assets/styles/main.css";
+import store from './store'
+// require styles
+import '@/assets/css/tailwind.css'
+
+
+Vue.config.productionTip = false
+
+Vue.use(Router)
+
 const routes = [
   { path: '/', redirect: { name: 'DashboardHome' } },
   { path: '/dashboard', component: Dashboard, children: [
@@ -12,14 +21,16 @@ const routes = [
       { path: 'home', name: 'DashboardHome', component: DashboardHome }
     ]
   }
+]
 
-];
+const router = new Router({
+  mode: 'history',
+  routes
+})
 
-const router = VueRouter.createRouter({
-  history: VueRouter.createWebHistory(),
-  routes,
-  
-});
+new Vue({
+  render: h => h(App),
+  router,
+  store
+}).$mount('#app')
 
-Vue.createApp(App).use(router).mount('#app');
-//import "@/assets/styles/main.css";
