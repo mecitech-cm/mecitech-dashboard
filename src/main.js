@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 
 // require styles
-import "@/assets/css/tailwind.css";
+import './assets/css/tailwind.css'
 
 createApp(App)
   .use(store)
