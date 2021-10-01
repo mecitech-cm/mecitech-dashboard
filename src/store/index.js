@@ -1,4 +1,4 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex';
 
 export default createStore({
   state: {
@@ -16,7 +16,7 @@ export default createStore({
   },
   actions: {
     toggleSidebar(context) {
-      context.commit("toggleSidebar");
+      context.commit('toggleSidebar');
     },
   },
 });
